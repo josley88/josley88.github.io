@@ -25,9 +25,16 @@ section, summary, time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;}
 
-article, aside, details, figcaption, figure,
+aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
+
+article {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 
 body {
 	line-height: 1;
@@ -604,6 +611,7 @@ input, select, textarea {
 		text-decoration: none;
 		border-bottom: none;
 		position: relative;
+
 	}
 
 		.icon:before {
@@ -640,8 +648,7 @@ input, select, textarea {
 	.image {
 		border-radius: 4px;
 		border: 0;
-		display: inline-block;
-		position: relative;
+		display: flex;
 	}
 
 		.image:before {
@@ -662,6 +669,7 @@ input, select, textarea {
 		.image img {
 			border-radius: 4px;
 			display: block;
+			justify-content: center;
 		}
 
 		.image.left, .image.right {
@@ -687,7 +695,7 @@ input, select, textarea {
 		.image.fit {
 			display: block;
 			margin: 0 0 2rem 0;
-			width: 100%;
+			width: 50%;
 		}
 
 			.image.fit img {
@@ -695,13 +703,16 @@ input, select, textarea {
 			}
 
 		.image.main {
-			display: block;
+			align-items: center;
+			justify-content: center;
 			margin: 2.5rem 0;
-			width: 100%;
+			width: 50%;
 		}
 
 			.image.main img {
-				width: 100%;
+				width: 50%;
+				align-items: center;
+				justify-content: center;
 			}
 
 		@media screen and (max-width: 736px) {
@@ -1140,9 +1151,12 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto,
+ 256px 256px;
+			background-position: center,
+ center;
+			background-repeat: no-repeat,
+ repeat;
 			z-index: 2;
 		}
 
@@ -1155,7 +1169,7 @@ input, select, textarea {
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-			background-image: url("../../images/bg.jpg");
+			background-image: url("../../images/bg.png");
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
